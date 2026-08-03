@@ -15,9 +15,11 @@ dist-ssr
 *.local
 
 # Env files (never commit real secrets — use .env.example instead)
+# .env.production is committed on purpose: it holds only public NEXT_PUBLIC_* values.
 .env
 .env.*
 !.env.example
+!.env.production
 
 # Vercel
 .vercel
