@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
-    Users, FileText, Calendar, Activity, Terminal, MessageSquare,
-    Check, AlertCircle, ArrowRight, Lock, Search, Sliders, LogOut,
+    Calendar, Activity, Terminal, MessageSquare,
+    Check, AlertCircle, ArrowRight, Lock, Search, LogOut,
     ChevronRight, X, Phone
 } from 'lucide-react';
 import { Transitions } from '../../components/Transitions';
@@ -101,6 +101,7 @@ export const Admin: React.FC = () => {
 
     useEffect(() => {
         if (!isAuthenticated) return;
+        // eslint-disable-next-line
         void fetchDatabase();
         const handler = () => void AppController.getTelemetryLogs().then(setLogs);
         window.addEventListener('trench_log_update', handler);

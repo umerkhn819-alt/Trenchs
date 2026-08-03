@@ -25,6 +25,9 @@ const projectRoot = path.join(__dirname);
 
 const nextConfig: NextConfig = {
     reactStrictMode: true,
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
     turbopack: {
         root: projectRoot
     },

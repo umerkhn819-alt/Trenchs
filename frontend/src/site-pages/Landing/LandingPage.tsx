@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Monitor, Cpu, Palette, ShoppingBag, Terminal, CheckCircle2, Zap, Shield, Code2, Layers, ChevronRight } from 'lucide-react';
-import { motion } from 'framer-motion';
+
 import { Seo } from '../../components/Seo';
 import { MagneticCTA } from '../../components/premium/MagneticCTA';
 import { Transitions } from '../../components/Transitions';

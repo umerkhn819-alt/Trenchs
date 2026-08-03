@@ -4,7 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { Transitions } from '../../components/Transitions';
 import { Seo } from '../../components/Seo';
 import { BLOG_POSTS } from '../../content/blog';
-import { motion, type Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { cinematicStagger, cinematicUp } from '../../lib/motion';
 import { CinematicText } from '../../components/effects/CinematicText';
 import styles from './BlogPost.module.css';
