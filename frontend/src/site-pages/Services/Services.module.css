@@ -1,0 +1,203 @@
+/* ─── HERO HEADER ──────────────────────────────────────────────── */
+.hero {
+    position: relative;
+    padding: clamp(9rem, 13vw, 11rem) 0 clamp(4rem, 6vw, 5rem);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1)), url('/imagesfortrenchlabs/Technologie-Netzwerk-Hintergrund_ _ Premium Foto.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.heroInner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.heroLeft {
+    max-width: 680px;
+}
+
+.heroTitle {
+    font-family: var(--font-sans);
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+    margin: 0 0 1rem;
+}
+
+.heroDesc {
+    font-family: var(--font-sans);
+    font-size: clamp(1.05rem, 2vw, 1.15rem);
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin: 0;
+}
+
+.heroRight {
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+.heroCta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #6ee7b7;
+    color: #0f172a;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.85rem 2.2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all var(--t-fast);
+    box-shadow: 0 10px 25px rgba(110, 231, 183, 0.4);
+}
+
+.heroCta:hover {
+    transform: translateY(-2px);
+    background: #34d399;
+    box-shadow: 0 15px 35px rgba(52, 211, 153, 0.5);
+}
+
+/* ─── GRID SECTION ─────────────────────────────────────────────── */
+.gridSection {
+    padding: 2rem 0 clamp(6rem, 10vw, 8rem);
+    background: none;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.cardWrap {
+    height: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--glass-bg-strong);
+    color: var(--text-primary);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-glass-deep);
+    border-radius: 24px;
+    padding: 2.5rem 2.25rem;
+    height: 100%;
+    text-decoration: none;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease, transform 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+    z-index: 10;
+}
+
+.cardHeader {
+    margin-bottom: 1.75rem;
+}
+
+.iconCircle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: color 0.5s ease;
+}
+
+.card:hover .iconCircle {
+    color: var(--color-accent);
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.cardTitle {
+    font-family: var(--font-sans);
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    transition: color 0.5s ease;
+}
+
+.card:hover .cardTitle {
+    color: #ffffff;
+}
+
+.cardDesc {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0;
+    color: var(--text-secondary);
+    transition: color 0.5s ease;
+}
+
+.card:hover .cardDesc {
+    color: #94a3b8;
+}
+
+.cardFooter {
+    margin-bottom: 2rem;
+    padding-top: 0;
+    border: none;
+}
+
+.exploreLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    transition: all 0.5s ease;
+}
+
+.card:hover .exploreLink {
+    color: var(--color-accent);
+    gap: 0.65rem;
+}
+
+/* FAQ */
+.faqSection {
+    padding: clamp(5rem, 8vw, 7rem) 0;
+    background: color-mix(in srgb, var(--bg-secondary) 55%, var(--bg-primary));
+    border-top: 1px solid var(--border-color);
+}
+
+.faqHeader {
+    margin-bottom: 3rem;
+}
+
+.faqList {
+    max-width: 780px;
+}
+
+@media (max-width: 1024px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .card:hover { transform: none; }
+}
+
+@media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+    .heroInner { flex-direction: column; gap: 1.5rem; }
+}

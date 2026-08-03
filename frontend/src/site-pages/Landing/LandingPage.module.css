@@ -1,0 +1,686 @@
+/* ============================================================
+   PITCH-BLACK MINIMALIST LANDING PAGE STYLESHEET
+   Strict Pure Black (#000000) Theme · Zero Blue Glows
+   ============================================================ */
+
+.landingRoot {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: var(--font-ui), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* ─── HERO SECTION ─────────────────────────────────────────── */
+.hero {
+    position: relative;
+    padding: clamp(7rem, 10vw, 11rem) 0 clamp(4rem, 6vw, 7rem);
+    background-color: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.heroGrid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.heroCopy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.75rem;
+}
+
+.badgeCapsule {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.badgeDot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+.heroTitle {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.08;
+    color: #ffffff;
+    margin: 0;
+}
+
+.heroDesc {
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.65;
+    max-width: 580px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.heroActions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.primaryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.95rem 2rem;
+    border-radius: 100px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+}
+
+.primaryBtn:hover {
+    transform: translateY(-2px);
+    background-color: #f0f0f0;
+    box-shadow: 0 15px 35px rgba(255, 255, 255, 0.25);
+}
+
+.secondaryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.95rem 2rem;
+    border-radius: 100px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.heroMetaPills {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+}
+
+.metaItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.metaLabel {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+}
+
+.metaValue {
+    font-size: 0.95rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Hero Media Display */
+.heroMediaFrame {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background-color: #050505;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+}
+
+.heroImgMain {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(15%) contrast(110%);
+    transition: transform 0.6s ease;
+}
+
+.heroMediaFrame:hover .heroImgMain {
+    transform: scale(1.03);
+}
+
+.heroMediaOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.85) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+.heroMediaBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    margin-bottom: 0.5rem;
+}
+
+.heroMediaCaption {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* ─── STATS STRIP ───────────────────────────────────────────── */
+.statsStrip {
+    background-color: #000000;
+    padding: 4rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.statCard {
+    background: rgba(18, 18, 18, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.statCard:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    background: rgba(25, 25, 25, 0.7);
+}
+
+.statNumber {
+    font-size: clamp(2.2rem, 3.5vw, 3rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+    letter-spacing: -0.03em;
+}
+
+.statText {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+}
+
+/* ─── SECTION COMMON ────────────────────────────────────────── */
+.sectionHeader {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 4rem;
+}
+
+.sectionTagline {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.sectionTitle {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    color: #ffffff;
+    margin: 0 0 1rem;
+}
+
+.sectionDesc {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ─── CAPABILITIES GRID ─────────────────────────────────────── */
+.capabilitiesSection {
+    padding: clamp(6rem, 9vw, 9rem) 0;
+    background-color: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.trackGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.trackCard {
+    background: rgba(15, 15, 15, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.trackCard:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-5px);
+    background: rgba(24, 24, 24, 0.85);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.trackHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.75rem;
+}
+
+.trackIconWrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.trackNum {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.05em;
+}
+
+.trackName {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.trackDesc {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.trackFooter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    margin-top: auto;
+    transition: transform 0.3s ease;
+}
+
+.trackCard:hover .trackFooter {
+    transform: translateX(4px);
+}
+
+/* ─── WORK & CASE STUDY SHOWCASE ────────────────────────────── */
+.workSection {
+    padding: clamp(6rem, 9vw, 9rem) 0;
+    background-color: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.workGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+}
+
+.workCard {
+    background: rgba(15, 15, 15, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.workCard:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9);
+}
+
+.workImgFrame {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    background-color: #080808;
+}
+
+.workImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+    filter: contrast(105%);
+}
+
+.workCard:hover .workImg {
+    transform: scale(1.05);
+}
+
+.workCategoryBadge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+}
+
+.workCardBody {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.workTitle {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.workTagline {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.workTechRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+}
+
+.techBadge {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+}
+
+.workCtaLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    margin-top: auto;
+    transition: transform 0.3s ease;
+}
+
+.workCard:hover .workCtaLink {
+    transform: translateX(6px);
+}
+
+/* ─── TEAM & CLIENT SPOTLIGHT ────────────────────────────────── */
+.teamSection {
+    padding: clamp(6rem, 9vw, 9rem) 0;
+    background-color: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.teamGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.teamCard {
+    background: rgba(15, 15, 15, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.teamCard:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+    background: rgba(24, 24, 24, 0.8);
+}
+
+.teamAvatarFrame {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.teamAvatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.teamName {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.teamRole {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.teamBio {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* ─── SYSTEMS GALLERY ────────────────────────────────────────── */
+.gallerySection {
+    padding: clamp(6rem, 9vw, 9rem) 0;
+    background-color: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+}
+
+.galleryFrame {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 260px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #0a0a0a;
+}
+
+.galleryImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    filter: grayscale(20%) contrast(110%);
+}
+
+.galleryFrame:hover .galleryImg {
+    transform: scale(1.06);
+}
+
+.galleryCaption {
+    position: absolute;
+    bottom: 0;
+    inset-x: 0;
+    padding: 1.5rem;
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.9) 100%);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* ─── CONSULTATION CTA BAND ──────────────────────────────────── */
+.ctaSection {
+    padding: clamp(6rem, 9vw, 9rem) 0;
+    background-color: #000000;
+}
+
+.ctaCard {
+    background: rgba(18, 18, 18, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 32px;
+    padding: clamp(3.5rem, 6vw, 5.5rem) 2.5rem;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+}
+
+.ctaTitle {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+}
+
+.ctaDesc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.65;
+    max-width: 620px;
+    margin: 0 auto 3rem;
+}
+
+.ctaActions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+/* ─── RESPONSIVE BREAKPOINTS ─────────────────────────────────── */
+@media (max-width: 1024px) {
+    .heroGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .trackGrid, .statsGrid, .teamGrid, .galleryGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .workGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .trackGrid, .statsGrid, .teamGrid, .galleryGrid {
+        grid-template-columns: 1fr;
+    }
+    .heroActions {
+        flex-direction: column;
+        width: 100%;
+    }
+    .primaryBtn, .secondaryBtn {
+        width: 100%;
+    }
+}

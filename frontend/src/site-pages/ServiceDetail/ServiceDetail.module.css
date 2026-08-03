@@ -1,0 +1,407 @@
+/* ============================================================
+   SERVICE DETAIL PAGE — PREMIUM ALTERNATING STYLESHEET
+   ============================================================ */
+
+/* Hero Split Layout */
+.hero {
+    position: relative;
+    padding: clamp(10rem, 12vw, 12rem) 0 clamp(6rem, 10vw, 8rem);
+    background-color: #000000;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.heroGlow {
+    position: absolute;
+    top: 0;
+    left: -20%;
+    width: 80vw;
+    height: 100%;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heroGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 3rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+.backLink:hover {
+    color: #ffffff;
+}
+
+.iconBox {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10px);
+}
+
+.heroTitle {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.tagline {
+    font-size: clamp(1.2rem, 1.5vw, 1.3rem);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+}
+
+.desc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.75;
+}
+
+.heroImageFrame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.heroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
+
+
+/* Sections Common */
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+/* Case Studies */
+.caseStudySection {
+    padding: clamp(6rem, 8vw, 10rem) 0;
+    background-color: #000000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.caseStudyGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.projectWrapper {
+    transition: transform 0.4s ease;
+}
+.projectWrapper:hover {
+    transform: translateY(-8px);
+}
+
+/* Production Process - Alternating Layout */
+.processSection {
+    padding: clamp(6rem, 8vw, 10rem) 0;
+    background-color: rgba(10, 10, 10, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.altSection {
+    padding: 6rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.altSection:last-child {
+    border-bottom: none;
+}
+
+.altGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.reverseGrid {
+    direction: rtl;
+}
+
+.reverseGrid > * {
+    direction: ltr;
+}
+
+.altText {
+    display: flex;
+    flex-direction: column;
+}
+
+.stepNumWrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stepNum {
+    font-family: var(--font-geom);
+    font-size: 1.5rem;
+    font-weight: 800;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stepNumWrap span {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.altTitle {
+    font-size: clamp(2.5rem, 3.5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+}
+
+.altDesc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+
+.altImageFrame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.altImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FAQs */
+.faqSection {
+    padding: clamp(6rem, 8vw, 10rem) 0;
+    background-color: #000000;
+}
+
+.faqLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.faqImageFrame {
+    position: sticky;
+    top: 6rem;
+    width: 100%;
+    aspect-ratio: 3/4;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faqImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faqCard {
+    display: flex;
+    gap: 1.5rem;
+    background: rgba(18, 22, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.faqCard:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    background: rgba(26, 32, 44, 0.75);
+}
+
+.faqIcon {
+    flex-shrink: 0;
+}
+
+.faqText h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.faqText p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.65;
+}
+
+/* CTA */
+.ctaSection {
+    padding: 0 0 clamp(6rem, 8vw, 10rem) 0;
+    background-color: #000000;
+}
+
+.ctaCard {
+    background: rgba(15, 15, 15, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 32px;
+    padding: 5rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ctaGlow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ctaTitle {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.ctaDesc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.ctaActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.primaryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.primaryBtn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2);
+}
+
+.secondaryBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.secondaryBtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Breakpoints */
+@media (max-width: 1024px) {
+    .heroGrid {
+        grid-template-columns: 1fr;
+    }
+    .altGrid, .faqLayout {
+        grid-template-columns: 1fr;
+    }
+    .reverseGrid {
+        direction: ltr;
+    }
+    .faqImageFrame {
+        position: relative;
+        top: 0;
+        aspect-ratio: 16/9;
+    }
+}
