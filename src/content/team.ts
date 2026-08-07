@@ -1,56 +1,68 @@
 import type { TeamExpertCard, TeamMemberDetail } from './types';
 
 export const TEAM_EXPERTS: TeamExpertCard[] = [
-    { id: 'umar-khan', name: 'Umar Khan', role: 'CEO & Founder', roleAbbr: 'CEO', accent: '#0f172a', photo: '/imagesfortrenchlabs/pfp_.jpg' },
-    { id: 'muhammad-tariq', name: 'Muhammad Tariq', role: 'Partnership Manager', roleAbbr: 'PM', accent: '#0f172a', photo: '/imagesfortrenchlabs/pfp_.jpg' },
-    { id: 'sarah-jenkins', name: 'Sarah Jenkins', role: 'Lead Systems Engineer', roleAbbr: 'SSE', accent: '#0f172a', photo: '/imagesfortrenchlabs/pfp_.jpg' }
+    { id: 'umar-khan', name: 'Umar Khan', role: 'CEO & Founder', roleAbbr: 'CEO', accent: '#0f172a', photo: '/imagesfortrenchlabs/Umer.jpeg' },
+    { id: 'ali-hamza', name: 'Ali Hamza', role: 'Lead Software Engineer', roleAbbr: 'CTO', accent: '#0f172a', photo: '/imagesfortrenchlabs/hmzaimgtrench.jpeg' },
+    { id: 'zunair-shahzad', name: 'Zunair Shahzad', role: 'Growth Manager', roleAbbr: 'GM', accent: '#0f172a', photo: '/imagesfortrenchlabs/zunairfortrench.jpeg' }
 ];
 
 export const TEAM_MEMBERS_BY_ID: Record<string, TeamMemberDetail> = {
     'umar-khan': {
         id: 'umar-khan',
         name: 'Umar Khan',
-        role: 'CEO & Founder',
+        role: 'Founder & Chief Executive Officer',
         roleAbbr: 'CEO',
-        philosophy: 'Simplifying architectural complexity is the ultimate form of digital premium. We code with speed and design with intent.',
-        bio: 'Umar established TrenchLabs to address the growing demand for highly responsive, zero-bloat web applications. With over 8 years of engineering expertise across distributed cloud platforms and production web systems, he guides our design principles and strategic operations.',
+
+        philosophy:
+            'Building scalable digital solutions that combine innovation, performance, and business impact.',
+
+        bio:
+            'Umar founded TrenchLabs with a vision to help businesses scale through modern web technologies, AI automation, and high-performance digital solutions.',
+
         skills: [
-            { name: 'System Architecture', val: '98%' },
-            { name: 'React / Next.js', val: '95%' },
-            { name: 'Distributed Systems', val: '92%' },
-            { name: 'Product Optimization', val: '96%' }
+            { name: 'Business Strategy', val: '98%' },
+            { name: 'Project Leadership', val: '96%' },
+            { name: 'Client Relations', val: '95%' },
+            { name: 'Product Vision', val: '94%' }
         ],
         projects: ['Nexa Restaurant Reservation Ledger', 'AssistFlow Automation Node Orchestrators'],
         accent: '#0f172a'
     },
-    'muhammad-tariq': {
-        id: 'muhammad-tariq',
-        name: 'Muhammad Tariq',
-        role: 'Partnership Manager',
-        roleAbbr: 'PM',
-        philosophy: 'Aligning business workflows with reliable tech is what fuels client scale and long-term retention loops.',
-        bio: 'Tariq connects client goals with our technical engineering tracks. He brings 6 years of expertise in digital product management, specialized CRO testing models, and technical requirements mapping, ensuring on-schedule, pixel-perfect deliveries.',
+    'ali-hamza': {
+        id: 'ali-hamza',
+        name: 'Ali Hamza',
+
+        role: 'Lead Software Engineer',
+
+        roleAbbr: 'CTO',
+
+        philosophy:
+            'Turning ideas into scalable software through clean architecture and modern engineering.',
+
+        bio:
+            'Ali leads software engineering at TrenchLabs, specializing in full-stack development, Shopify solutions, AI integrations, and scalable web applications.',
+
         skills: [
-            { name: 'Product Management', val: '96%' },
-            { name: 'CRO Optimization', val: '92%' },
-            { name: 'Client Engagement', val: '98%' },
-            { name: 'Agile Timelines', val: '95%' }
+            { name: 'Full Stack Development', val: '97%' },
+            { name: 'Shopify Development', val: '98%' },
+            { name: 'AI Integration', val: '94%' },
+            { name: 'System Design', val: '95%' }
         ],
         projects: ['Velora Fashion Conversion Programs', 'GrowthPulse technical performance'],
         accent: '#0f172a'
     },
-    'sarah-jenkins': {
-        id: 'sarah-jenkins',
-        name: 'Sarah Jenkins',
-        role: 'Lead Systems Engineer',
-        roleAbbr: 'SSE',
-        philosophy: 'Database queries and background event loops must be designed to behave predictable under massive concurrent stress loads.',
-        bio: 'Sarah leads our backend systems and server optimization. Specialized in relational structures, PostgreSQL query indexing, and Node middleware, she ensures TrenchLabs builds sustain high peaks with zero latency spikes.',
+    'zunair-shahzad': {
+        id: 'zunair-shahzad',
+        name: 'Zunair Shahzad',
+        role: 'Growth Manager',
+        roleAbbr: 'GM',
+        philosophy: 'Growth happens where creativity meets data-driven marketing.',
+        bio: 'Zunair leads digital marketing, brand strategy, social media management, lead generation, and business growth initiatives for TrenchLabs.',
         skills: [
-            { name: 'PostgreSQL & Redis', val: '97%' },
-            { name: 'Node.js Middleware', val: '96%' },
-            { name: 'Cloud Infrastructure', val: '94%' },
-            { name: 'API Design Patterns', val: '95%' }
+            { name: 'Digital Marketing', val: '97%' },
+            { name: 'Brand Strategy', val: '96%' },
+            { name: 'Social Media', val: '98%' },
+            { name: 'Lead Generation', val: '95%' }
         ],
         projects: ['Redis Double-booking Lock for Nexa', 'HIPAA Secure Patient Directories'],
         accent: '#0f172a'

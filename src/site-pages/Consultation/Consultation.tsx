@@ -55,7 +55,7 @@ export const Consultation: React.FC = () => {
             setIsConfirmed(true);
         } catch (err) {
             console.error(err);
-            setSubmitError('Something went wrong. Email hello@trenchlabs.com and we will sort it out.');
+            setSubmitError('Something went wrong. Email labstrench@gmail.com and we will sort it out.');
         } finally {
             setIsScheduling(false);
         }
@@ -189,7 +189,7 @@ export const Consultation: React.FC = () => {
                                 </div>
                                 <h2>You&apos;re booked</h2>
                                 <p>
-                                    Check your email for the link. If it&apos;s missing in five minutes, write hello@trenchlabs.com—we
+                                    Check your email for the link. If it&apos;s missing in five minutes, write labstrench@gmail.com—we
                                     read every message.
                                 </p>
                                 <div className={styles.summaryBox}>

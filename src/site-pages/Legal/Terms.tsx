@@ -43,7 +43,7 @@ export const Terms: React.FC = () => (
                     </p>
                     <h2>Contact</h2>
                     <p>
-                        <a href="mailto:hello@trenchlabs.com">hello@trenchlabs.com</a>
+                        <a href="mailto:labstrench@gmail.com">labstrench@gmail.com</a>
                     </p>
                 </motion.div>
             </motion.div>

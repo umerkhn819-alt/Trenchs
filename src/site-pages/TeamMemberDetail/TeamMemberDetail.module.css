@@ -27,9 +27,10 @@
     font-weight: 800;
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgb(239, 234, 234);
+    background-color: rgba(59, 50, 50, 0.18);
+    color: #f8fafc !important;
 }
-
 .heroContent h1 {
     font-size: clamp(2rem, 5vw, 3.2rem);
     margin-bottom: 0.25rem;
@@ -140,15 +141,18 @@
 }
 
 .barTrack {
-    background-color: var(--bg-subtle);
-    border: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
     height: 6px;
     border-radius: var(--radius-full);
     overflow: hidden;
 }
+
 .barFill {
     height: 100%;
     border-radius: var(--radius-full);
+    background: linear-gradient(90deg, #38bdf8 0%, #60a5fa 100%);
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
 }
 
 .mailCTA {

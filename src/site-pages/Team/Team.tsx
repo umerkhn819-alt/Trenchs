@@ -43,7 +43,7 @@ export const Team: React.FC = () => {
                         <CinematicText as="p" className={styles.heroIntro} staggerDelay={0.03}>
                             At TrenchLabs, we believe in the power of engineering to elevate brands. We're a technical agency that specializes in crafting bold systems, user-centric applications, and innovative digital solutions. With over 150 projects completed, we've built a reputation for delivering exceptional, results-driven software.
                         </CinematicText>
-                        
+
                         <motion.div variants={cinematicUp} className={styles.heroImageWrap}>
                             <div className={styles.imageGlow} />
                             <img src="/imagesfortrenchlabs/download (4).jpg" alt="TrenchLabs Team" className={styles.heroImage} />
@@ -65,7 +65,7 @@ export const Team: React.FC = () => {
             {/* Stats strip */}
             <section className={styles.statsSection}>
                 <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-                    <motion.div 
+                    <motion.div
                         className={styles.statsGrid}
                         variants={cinematicStagger}
                         initial="hidden"
@@ -91,7 +91,7 @@ export const Team: React.FC = () => {
             {/* Team cards - Massive */}
             <section className={styles.gridSection}>
                 <div className="container">
-                    <motion.div 
+                    <motion.div
                         className={styles.sectionHeader}
                         variants={cinematicUp}
                         initial="hidden"
@@ -101,7 +101,7 @@ export const Team: React.FC = () => {
                         <span className="section-tagline">Leadership</span>
                         <h2 className="section-title">The Syndicate</h2>
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                         className={styles.grid}
                         variants={cinematicStagger}
                         initial="hidden"
@@ -111,21 +111,24 @@ export const Team: React.FC = () => {
                         {TEAM_EXPERTS.map((mem, idx) => (
                             <CinematicCard key={mem.id} delay={idx * 0.1}>
                                 <Link to={`/team/${mem.id}`} className={styles.teamCard}>
-                                    <div className={styles.teamCardPhoto}>
-                                        <div className={styles.teamCardOverlay} />
-                                        {mem.photo ? (
-                                            <img src={mem.photo} alt={mem.name} className={styles.teamCardImg} />
-                                        ) : (
-                                            <div className={styles.teamCardPlaceholder}>
-                                                <span>{mem.name.charAt(0)}</span>
-                                            </div>
-                                        )}
-                                    </div>
+                                    {mem.photo ? (
+                                        <img src={mem.photo} alt={mem.name} className={styles.teamCardImg} />
+                                    ) : (
+                                        <div className={styles.teamCardPlaceholder}>
+                                            <span>{mem.name.charAt(0)}</span>
+                                        </div>
+                                    )}
+                                    <div className={styles.teamCardOverlay} />
+                                    
                                     <div className={styles.teamCardBody}>
-                                        <span className={styles.roleBadge}>{mem.role}</span>
-                                        <h3>{mem.name}</h3>
-                                        <p>{TEAM_MEMBERS_BY_ID[mem.id]?.philosophy}</p>
-                                        <span className={styles.teamCardCta}>View Dossier &rarr;</span>
+                                        <div className={styles.teamCardHeader}>
+                                            <h3>{mem.name}</h3>
+                                            <span className={styles.roleBadge}>{mem.role}</span>
+                                        </div>
+                                        <div className={styles.teamCardHoverContent}>
+                                            <p>{TEAM_MEMBERS_BY_ID[mem.id]?.philosophy}</p>
+                                            <span className={styles.teamCardCta}>View Dossier &rarr;</span>
+                                        </div>
                                     </div>
                                 </Link>
                             </CinematicCard>
@@ -137,7 +140,7 @@ export const Team: React.FC = () => {
             {/* Values section */}
             <section className={styles.valuesSection}>
                 <div className="container">
-                    <motion.div 
+                    <motion.div
                         className={styles.sectionHeader}
                         variants={cinematicUp}
                         initial="hidden"
@@ -147,7 +150,7 @@ export const Team: React.FC = () => {
                         <span className="section-tagline">Philosophy</span>
                         <h2 className="section-title">Engineering Principles</h2>
                     </motion.div>
-                    <motion.div 
+                    <motion.div
                         className={styles.valuesGrid}
                         variants={cinematicStagger}
                         initial="hidden"

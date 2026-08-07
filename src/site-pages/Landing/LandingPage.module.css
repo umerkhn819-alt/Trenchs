@@ -516,57 +516,101 @@
 }
 
 .teamCard {
-    background: rgba(15, 15, 15, 0.6);
+    position: relative;
+    aspect-ratio: 3 / 4;
+    background: #111;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 24px;
-    padding: 2rem 1.5rem;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.teamCard:hover {
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-4px);
-    background: rgba(24, 24, 24, 0.8);
-}
-
-.teamAvatarFrame {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto 1.5rem;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
-}
-
-.teamAvatar {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    text-decoration: none;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     display: block;
 }
 
+.teamCard:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+.teamCardOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 100%);
+    z-index: 1;
+    transition: background 0.7s ease;
+}
+
+.teamCard:hover .teamCardOverlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 0.4) 100%);
+}
+
+.teamCardImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s ease;
+    filter: grayscale(80%) contrast(1.1);
+}
+
+.teamCard:hover .teamCardImg {
+    transform: scale(1.05);
+    filter: grayscale(0%) contrast(1.05);
+}
+
+.teamCardBody {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.teamCardHeader {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .teamName {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 800;
     color: #ffffff;
-    margin-bottom: 0.25rem;
+    margin: 0;
 }
 
 .teamRole {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.6);
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    margin-top: 0.4rem;
+}
+
+.teamCardHoverContent {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(15px);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.teamCard:hover .teamCardHoverContent {
+    max-height: 150px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 1rem;
 }
 
 .teamBio {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.75);
-    line-height: 1.55;
+    line-height: 1.6;
     margin: 0;
 }
 

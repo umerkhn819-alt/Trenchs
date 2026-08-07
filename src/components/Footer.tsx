@@ -96,8 +96,8 @@ export const Footer: React.FC<FooterProps> = ({ hideCTA }) => {
                     <div className={styles.linksCol}>
                         <h4 className={styles.title}>Connect</h4>
                         <div className={styles.socials}>
-                            <a href="mailto:hello@trenchlabs.com" className={styles.email}>
-                                hello@trenchlabs.com
+                            <a href="mailto:labstrench@gmail.com" className={styles.email}>
+                                labstrench@gmail.com
                             </a>
                             <a
                                 href="https://wa.me/923390606281"
@@ -111,18 +111,17 @@ export const Footer: React.FC<FooterProps> = ({ hideCTA }) => {
                                 WhatsApp us
                             </a>
                             <div className={styles.socialIcons}>
-                                <a href="https://github.com/trenchlabs" target="_blank" rel="noopener noreferrer">
-                                    GitHub
-                                </a>
-                                <a href="https://instagram.com/trech.labs" target="_blank" rel="noopener noreferrer">
+                               
+                                <a href="https://www.instagram.com/trench.labs?igsh=MTBoOWFwa2VkOTBjNw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">
                                     Instagram
                                 </a>
-                                <a href="https://linkedin.com/company/trenchlabs" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.linkedin.com/in/trench-labs-a157b1409?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer">
                                     LinkedIn
                                 </a>
-                                <a href="https://twitter.com/trenchlabs" target="_blank" rel="noopener noreferrer">
-                                    Twitter
+                                 <a href=" https://www.facebook.com/share/1GgG9tab8T/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                                    FaceBook
                                 </a>
+                               
                             </div>
                         </div>
                     </div>

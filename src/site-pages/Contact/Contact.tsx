@@ -34,7 +34,7 @@ export const Contact: React.FC = () => {
             setIsSuccess(true);
         } catch (err) {
             console.error(err);
-            setSubmitError('Something went wrong. Email hello@trenchlabs.com and we\'ll sort it out.');
+            setSubmitError('Something went wrong. Email labstrench@gmail.com and we\'ll sort it out.');
         } finally {
             setIsSubmitting(false);
         }
@@ -84,24 +84,24 @@ export const Contact: React.FC = () => {
                             <CinematicText as="p" className={styles.infoSub}>Prefer async? Email or WhatsApp—no calendar required.</CinematicText>
 
                             <div className={styles.infoCards}>
-                                <a href="mailto:hello@trenchlabs.com" className={styles.infoCard}>
+                                <a href="mailto:labstrench@gmail.com" className={styles.infoCard}>
                                     <div className={styles.infoCardIcon} style={{ background: 'rgb(56 189 248 / 0.12)', color: '#38bdf8' }}>
                                         <Mail size={20} />
                                     </div>
                                     <div>
                                         <h4>Email</h4>
-                                        <p>hello@trenchlabs.com</p>
+                                        <p>labstrench@gmail.com</p>
                                         <span className={styles.infoCardSub}>Replies within 1 business day</span>
                                     </div>
                                 </a>
 
-                                <a href="https://wa.me/923000000000" target="_blank" rel="noopener noreferrer" className={styles.infoCard}>
+                                <a href="https://wa.me/923390606281" target="_blank" rel="noopener noreferrer" className={styles.infoCard}>
                                     <div className={styles.infoCardIcon} style={{ background: 'rgb(37 211 102 / 0.12)', color: '#25d366' }}>
                                         <Phone size={20} />
                                     </div>
                                     <div>
                                         <h4>WhatsApp</h4>
-                                        <p>+92 300 000 0000</p>
+                                        <p>+92 339 060 6281</p>
                                         <span className={styles.infoCardSub}>Message us now →</span>
                                     </div>
                                 </a>

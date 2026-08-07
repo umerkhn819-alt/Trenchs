@@ -45,7 +45,7 @@ export const Privacy: React.FC = () => (
                     </p>
                     <h2>Contact</h2>
                     <p>
-                        Questions: <a href="mailto:hello@trenchlabs.com">hello@trenchlabs.com</a>
+                        Questions: <a href="mailto:labstrench@gmail.com">labstrench@gmail.com</a>
                     </p>
                 </motion.div>
             </motion.div>

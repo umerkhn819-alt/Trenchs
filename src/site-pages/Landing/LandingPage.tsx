@@ -20,28 +20,30 @@ export const LandingPage: React.FC = () => {
         },
         {
             num: '02',
-            id: 'ai-automation',
-            name: 'AI Automation Systems',
-            desc: 'Custom LLM triggers, automated lead pipelines, and autonomous workflow engines integrated directly with your production databases.',
-            icon: Cpu,
-            path: '/services/ai-automation'
-        },
-        {
-            num: '03',
-            id: 'ui-ux-design',
-            name: 'UI / UX Product Design',
-            desc: 'Bespoke design systems, product interfaces, and interactive motion components engineered to ship cleanly without developer friction.',
-            icon: Palette,
-            path: '/services/ui-ux-design'
-        },
-        {
-            num: '04',
             id: 'e-commerce',
             name: 'E-Commerce Solutions',
             desc: 'Custom Shopify Liquid storefronts, headless checkout flows, and merchandising stacks built for rapid conversion.',
             icon: ShoppingBag,
             path: '/services/e-commerce'
         },
+        {
+            num: '03',
+            id: 'ai-automation',
+            name: 'AI Automation Systems',
+            desc: 'Custom LLM triggers, automated lead pipelines, and autonomous workflow engines integrated directly with your production databases.',
+            icon: Cpu,
+            path: '/services/ai-automation'
+        },
+
+        {
+            num: '04',
+            id: 'ui-ux-design',
+            name: 'UI / UX Product Design',
+            desc: 'Bespoke design systems, product interfaces, and interactive motion components engineered to ship cleanly without developer friction.',
+            icon: Palette,
+            path: '/services/ui-ux-design'
+        },
+
         {
             num: '05',
             id: 'wordpress',
@@ -94,26 +96,27 @@ export const LandingPage: React.FC = () => {
     const TEAM = [
         {
             name: 'Umar Khan',
-            role: 'Founder & Systems Architect',
-            bio: 'Directs architecture, core engineering, and high-concurrency database designs.',
-            avatar: '/imagesfortrenchlabs/pfp_.jpg'
+            role: 'Founder & CEO',
+            bio: 'Umar founded TrenchLabs with a vision to help businesses scale through modern web technologies, AI automation, and high-performance digital solutions.',
+            avatar: '/imagesfortrenchlabs/Umer.jpeg'
+
         },
         {
-            name: 'Sarah Chen',
-            role: 'UI/UX Design Director',
-            bio: 'Leads product design systems, typography tokens, and motion interaction models.',
-            avatar: '/imagesfortrenchlabs/pfp_.jpg'
+            name: 'Ali Hamza',
+            role: 'Lead Software Engineer',
+            bio: 'Ali leads software engineering at TrenchLabs, specializing in full-stack development, Shopify solutions, AI integrations, and scalable web applications.',
+            avatar: '/imagesfortrenchlabs/hmzaimgtrench.jpeg'
         },
         {
-            name: 'Tariq Malik',
-            role: 'AI Automation Lead',
-            bio: 'Specializes in LLM orchestrations, API webhooks, and asynchronous worker queues.',
-            avatar: '/imagesfortrenchlabs/pfp_.jpg'
+            name: 'Zunair Shahzad',
+            role: 'Growth Officer',
+            bio: 'Zunair leads digital marketing, brand strategy, social media management, lead generation, and business growth initiatives for TrenchLabs.',
+            avatar: '/imagesfortrenchlabs/zunairfortrench.jpeg'
         },
         {
-            name: 'Clara Oswald',
-            role: 'Senior Full-Stack Engineer',
-            bio: 'Engineers Next.js frontends, custom Liquid themes, and backend REST endpoints.',
+            name: 'Numan Tehseen',
+            role: 'AI Engineer',
+            bio: 'Numan designs and implements AI-driven solutions, focusing on machine learning models, natural language processing, and data analysis pipelines.',
             avatar: '/imagesfortrenchlabs/pfp_.jpg'
         }
     ];
@@ -205,15 +208,15 @@ export const LandingPage: React.FC = () => {
                                 <div className={styles.statText}>Client Retention Rate</div>
                             </div>
                             <div className={styles.statCard}>
-                                <div className={styles.statNumber}><AnimatedCounter to={50} suffix="M+" /></div>
+                                <div className={styles.statNumber}><AnimatedCounter to={1} suffix="K+" /></div>
                                 <div className={styles.statText}>API Events Routed</div>
                             </div>
                             <div className={styles.statCard}>
-                                <div className={styles.statNumber}><AnimatedCounter to={150} suffix="+" /></div>
+                                <div className={styles.statNumber}><AnimatedCounter to={3} suffix="+" /></div>
                                 <div className={styles.statText}>Systems Shipped</div>
                             </div>
                             <div className={styles.statCard}>
-                                <div className={styles.statNumber}><AnimatedCounter to={40} prefix="<" suffix="%" /></div>
+                                <div className={styles.statNumber}><AnimatedCounter to={35} prefix="<" suffix="%" /></div>
                                 <div className={styles.statText}>Average Latency Reduction</div>
                             </div>
                         </div>
@@ -297,12 +300,18 @@ export const LandingPage: React.FC = () => {
                         <div className={styles.teamGrid}>
                             {TEAM.map((member) => (
                                 <div key={member.name} className={styles.teamCard}>
-                                    <div className={styles.teamAvatarFrame}>
-                                        <img src={member.avatar} alt={member.name} className={styles.teamAvatar} />
+                                    <img src={member.avatar} alt={member.name} className={styles.teamCardImg} />
+                                    <div className={styles.teamCardOverlay} />
+
+                                    <div className={styles.teamCardBody}>
+                                        <div className={styles.teamCardHeader}>
+                                            <h3 className={styles.teamName}>{member.name}</h3>
+                                            <div className={styles.teamRole}>{member.role}</div>
+                                        </div>
+                                        <div className={styles.teamCardHoverContent}>
+                                            <p className={styles.teamBio}>{member.bio}</p>
+                                        </div>
                                     </div>
-                                    <h3 className={styles.teamName}>{member.name}</h3>
-                                    <div className={styles.teamRole}>{member.role}</div>
-                                    <p className={styles.teamBio}>{member.bio}</p>
                                 </div>
                             ))}
                         </div>

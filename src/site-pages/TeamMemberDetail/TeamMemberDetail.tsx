@@ -70,7 +70,7 @@ export const TeamMemberDetail: React.FC = () => {
                                         <div key={i} className={styles.skillRow}>
                                             <div className={styles.skillMeta}>
                                                 <span>{sk.name}</span>
-                                                <span style={{ color: mem.accent }}>{sk.val}</span>
+                                                <span style={{ color: '#e2e8f0' }}>{sk.val}</span>
                                             </div>
                                             <div className={styles.barTrack}>
                                                 <div className={styles.barFill} style={{ width: sk.val, backgroundColor: mem.accent }}></div>
@@ -81,7 +81,7 @@ export const TeamMemberDetail: React.FC = () => {
                             </div>
 
                             {/* Connect quick trigger */}
-                            <a href="mailto:hello@trenchlabs.com" className={styles.mailCTA} style={{ '--accent': mem.accent } as React.CSSProperties}>
+                            <a href="mailto:labstrench@gmail.com" className={styles.mailCTA} style={{ '--accent': mem.accent } as React.CSSProperties}>
                                 <Mail size={16} /> Contact via TrenchLabs Registry
                             </a>
                         </div>

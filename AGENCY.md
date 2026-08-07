@@ -212,7 +212,7 @@ We publish technical breakdowns and thinking on the craft of digital engineering
 We work on a **consultation-first** basis. Every engagement starts with a discovery call to understand your goals before any proposal is written.
 
 - **Website:** trenchlabs.com
-- **Email:** hello@trenchlabs.com
+- **Email:** labstrench@gmail.com
 - **Contact form:** `/contact`
 - **Book a consultation:** `/consultation`
 

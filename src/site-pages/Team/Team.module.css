@@ -156,14 +156,15 @@
 }
 
 .teamCard {
-    display: flex;
-    flex-direction: column;
-    background: rgba(15, 15, 15, 0.4);
+    position: relative;
+    aspect-ratio: 3 / 4;
+    background: #111;
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 32px;
     overflow: hidden;
     text-decoration: none;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    display: block;
 }
 
 .teamCard:hover {
@@ -172,37 +173,36 @@
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
 }
 
-.teamCardPhoto {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    overflow: hidden;
-    background: #111;
-}
-
 .teamCardOverlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 60%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 100%);
     z-index: 1;
+    transition: background 0.7s ease;
+}
+
+.teamCard:hover .teamCardOverlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 0.4) 100%);
 }
 
 .teamCardImg {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    filter: grayscale(100%) contrast(1.2);
+    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), filter 0.7s ease;
+    filter: grayscale(80%) contrast(1.1);
 }
 
 .teamCard:hover .teamCardImg {
     transform: scale(1.05);
-    filter: grayscale(0%) contrast(1);
+    filter: grayscale(0%) contrast(1.05);
 }
 
 .teamCardPlaceholder {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,13 +212,19 @@
 }
 
 .teamCardBody {
-    padding: 3rem;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem;
     z-index: 2;
-    background: linear-gradient(to bottom, rgba(15, 15, 15, 0.4) 0%, rgba(10, 10, 10, 0.8) 100%);
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.teamCardHeader {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .roleBadge {
@@ -227,8 +233,8 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 0.5rem;
 }
 
 .teamCardBody h3 {
@@ -236,15 +242,29 @@
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     font-weight: 800;
     color: #ffffff;
-    margin-bottom: 1rem;
+    margin: 0;
 }
 
-.teamCardBody p {
+.teamCardHoverContent {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(20px);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.teamCard:hover .teamCardHoverContent {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 1.5rem;
+}
+
+.teamCardHoverContent p {
     font-size: 1.05rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.75);
     line-height: 1.6;
-    margin-bottom: 2.5rem;
-    flex-grow: 1;
+    margin-bottom: 2rem;
 }
 
 .teamCardCta {
